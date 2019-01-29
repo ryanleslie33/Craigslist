@@ -1,4 +1,4 @@
-export class Post {
-  constructor (public category: string){}
-  
+export class Category {
+  constructor (public category: string, public id: number){}
+
 }
