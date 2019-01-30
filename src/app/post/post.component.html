@@ -2,9 +2,17 @@
   post works!
 </p>
 
+  <div *ngIf= " clickedCategory  == 1 ">
+    <div   *ngFor="let bike of bikes" >
+      <h3><a >{{bike.category}}</a></h3>
+    </div>
+  </div>
 
-<div   *ngFor="let post of posts" >
 
-    <h3><a >{{post.category}}</a></h3>
 
+<div *ngIf= " clickedCategory == 2">
+
+  <div   *ngFor="let car of cars" >
+    <h3><a >{{car.category}}</a></h3>
+  </div>
 </div>

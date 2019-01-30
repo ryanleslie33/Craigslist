@@ -14,19 +14,20 @@ export class CategoriesComponent implements OnInit {
 
   categories = CATEGORIES;
 
+  selectedCategory = null;
   goToDetail(clickedCategory: Category) {
     this.router.navigate(['categories', clickedCategory.id]);
+    this.selectedCategory = clickedCategory.id;
   }
 
-  selectedCategory = null;
 
-  // chooseCategory(slkafj: Category){
-  //   this.selectedCategory = slkafj.name;
+  // chooseCategory(clickedCategory: Category){
   // }
 
   constructor(private router: Router) {}
 
   ngOnInit() {
+
   }
 
 }
