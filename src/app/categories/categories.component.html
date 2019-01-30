@@ -1,5 +1,4 @@
 <h2>craigslist</h2>
 <p>pick a category</p>
-<div *ngFor="let x of categories" >
-  <h3><a (click)="goToDetail(x)" >{{x.name}}</a></h3>
+<div *ngFor="let x of categories" (click)="goToDetail(x)"><h2>{{x.name}}</h2>
 </div>
