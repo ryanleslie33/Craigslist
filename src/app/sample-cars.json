@@ -1,0 +1,19 @@
+{ "cars": [{
+    "category": "bently",
+    "item": "fourWheeler",
+    "description": "A fancy car.",
+    "id": "1"
+    }, {
+    "category": "chevy",
+    "item": "suv",
+    "description": "Outdoors type.",
+    "id": "2"
+    }, {
+    "category": "luxury",
+    "item": "sedan",
+    "description": "SPendy type.",
+    "id": "3"
+  }]
+}
+
+/* Test file for firebase */

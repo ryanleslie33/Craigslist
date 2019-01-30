@@ -1,3 +1,9 @@
 <p>
   category-items works!
 </p>
+<div *ngIf="clickedItem == 1">
+
+  <div *ngFor=" let bike of bikes" >
+    <p>{{bike.item}}</p>
+  </div>
+</div>

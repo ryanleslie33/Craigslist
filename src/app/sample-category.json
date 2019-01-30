@@ -1,0 +1,16 @@
+{ "categories": [{
+    "name": "bikes",
+    "id": "1"
+    }, {
+    "name": "cars",
+    "id": "2"
+    }, {
+    "name": "luxury",
+    "id": "3"
+    }, {
+    "name": "luxury",
+    "id": "4"
+  }]
+}
+
+/* Test file for firebase */

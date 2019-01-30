@@ -6,7 +6,8 @@ import { CATEGORIES } from '../mock-categories';
 import { BIKES, CARS } from '../mock-posts';  //Bob changed This
 import { CategoryService } from '../category.service'
 import { Router } from '@angular/router';
-import { Category } from '../category.model'; //Bob added this.
+import { Category } from '../category.model';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-post',
@@ -19,17 +20,19 @@ categories=CATEGORIES;  //This is a Category object
 bikes = BIKES;  //This is a Post object
 cars = CARS;  //This is a Post object
 clickedCategory;
+clickedItem;
   constructor(private route: ActivatedRoute, private router: Router, private categoryService: CategoryService) { }
 
   ngOnInit() {
-    this.categories = this.categoryService.getCategories();
+    // this.categories = this.categoryService.getCategories();
     this.route.params.forEach((urlParameters) => {
       this.clickedCategory = parseInt(urlParameters['id']);
     });
 
   }
-  goToDetail(clickedCategory: Category) {
-    this.router.navigate(['categories', clickedCategory.id]);
+
+  goToItem(clickedItem: Category) {
+    this.router.navigate(['category-items', clickedItem.id]);
   }
 
 

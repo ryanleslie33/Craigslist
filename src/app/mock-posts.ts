@@ -1,8 +1,8 @@
 import { Post } from './post.model'
 
 export const CARS: Post[] = [
-  new Post("bently", "Artist", "This albums description",1 ),
-  new Post("chevy", "The Stooges",
+  new Post("bently", "fourWheeler", "This albums description",1 ),
+  new Post("chevy", "suv",
   "The second  album from the American rock band, released in 1970 by Elektra Records.", 2 ),
   new Post("Twilight of the Thunder God", "Amon Amarth",
   "Seventh album by the Swedish band, released in 2008, based on Thor's battle with the serpent Jörmungandr", 3),
@@ -14,10 +14,10 @@ export const CARS: Post[] = [
   "Second studio album by the English-American band, released in 1967.", 6)
 ];
 export const BIKES: Post[] = [
-  new Post("trek", "Artist", "This albums description",1 ),
-  new Post("Mongoose", "The Stooges",
+  new Post("trek", "mountainBIke", "This albums description",1 ),
+  new Post("Mongoose", "bmx",
   "The second  album from the American rock band, released in 1970 by Elektra Records.", 2 ),
-  new Post("trek", "Amon Amarth",
+  new Post("huffy", "roadBike",
   "Seventh album by the Swedish band, released in 2008, based on Thor's battle with the serpent Jörmungandr", 3),
   new Post("2wheels", "Ani DiFranco",
   "Her highest-selling and most acclaimed album, released in 1996.number", 4),

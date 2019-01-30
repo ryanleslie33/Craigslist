@@ -3,7 +3,7 @@
 </p>
 
   <div *ngIf= " clickedCategory  == 1 ">
-    <div   *ngFor="let bike of bikes" >
+    <div   *ngFor="let bike of bikes" (click)="goToItem(bike)">
       <h3><a >{{bike.category}}</a></h3>
     </div>
   </div>
@@ -12,7 +12,7 @@
 
 <div *ngIf= " clickedCategory == 2">
 
-  <div   *ngFor="let car of cars" >
+  <div   *ngFor="let car of cars" (click)="goToItem(car)">
     <h3><a >{{car.category}}</a></h3>
   </div>
 </div>

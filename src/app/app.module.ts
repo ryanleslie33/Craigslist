@@ -7,8 +7,18 @@ import { AppComponent } from './app.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { CategoryItemsComponent } from './category-items/category-items.component';
 import { PostComponent } from './post/post.component';
+import { masterFirebaseConfig } from './api-keys';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
-
+export const firebaseConfig = {
+  apiKey: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseURL,
+  storageBucket: masterFirebaseConfig.storageBucket
+};
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,9 +28,11 @@ import { PostComponent } from './post/post.component';
   ],
   imports: [
     BrowserModule,
-    // FormsModule,
-    // HttpModule,
-    routing
+    FormsModule,
+    HttpModule,
+    routing,
+    AngularFireModule.initializeApp(firebaseConfig),
+ AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

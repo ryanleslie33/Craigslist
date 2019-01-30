@@ -1,0 +1,19 @@
+{ "bikes": [{
+    "category": "BMX",
+    "item": "Two wheeler stunt",
+    "description": "Helmet required.",
+    "id": "1"
+    }, {
+    "category": "Trike",
+    "item": "3-wheels",
+    "description": "Rare.",
+    "id": "2"
+    }, {
+    "category": "supline",
+    "item": "two large wheels",
+    "description": "More rare.",
+    "id": "3"
+    }]
+  }
+
+/* Test file for firebase */

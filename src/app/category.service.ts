@@ -5,20 +5,25 @@ import { Category } from './category.model';
 import { CATEGORIES } from './mock-categories';
 import { Router } from '@angular/router';
 import {CategoriesComponent} from './categories/categories.component'
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()
 export class CategoryService {
-
-  constructor() { }
+  cars = CARS
+  bikes = BIKES
+ categories: FirebaseListObservable<any[]>;
+  constructor(private database: AngularFireDatabase) {
+this.categories = database.list('categories');
+  }
 
   getCategories(){
-    return CATEGORIES;
+    return this.categories;
   }
   getCars(){
-    return CARS;
+    return this.cars;
   }
   getBikes(){
-    return BIKES;
+    return this.bikes;
   }
 
   // selectedCategory(clickedCategory) {
