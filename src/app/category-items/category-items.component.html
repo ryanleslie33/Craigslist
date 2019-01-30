@@ -1,9 +1,16 @@
 <p>
   category-items works!
 </p>
-<div *ngIf="clickedItem == 1">
+
+<!-- <div *ngFor="bike.id ==1">
+
+  <p>{{bikes.id}} {{bike.item}}</p>
+</div> -->
+
+
 
   <div *ngFor=" let bike of bikes" >
-    <p>{{bike.item}}</p>
+    <div *ngIf="clickedItem == bike.id">
+    <p>{{clickedItem}}{{bike.item}} </p>
   </div>
 </div>

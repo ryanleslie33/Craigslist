@@ -27,11 +27,12 @@ clickedItem;
     // this.categories = this.categoryService.getCategories();
     this.route.params.forEach((urlParameters) => {
       this.clickedCategory = parseInt(urlParameters['id']);
+
     });
 
   }
 
-  goToItem(clickedItem: Category) {
+  goToItem(clickedItem: Post) {
     this.router.navigate(['category-items', clickedItem.id]);
   }
 

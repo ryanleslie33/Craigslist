@@ -9,15 +9,28 @@ const appRoutes: Routes = [
     path: '',
     component: CategoriesComponent
   },
+  // {
+  //   path: 'categories/:id',
+  //   component: PostComponent
+  // },
+  // {
+  //   path: 'category-items/:id',
+  //   component: CategoryItemsComponent
+  // }
+//Next section added by Bob:
   {
     path: 'categories/:id',
     component: PostComponent
   },
   {
     path: 'category-items/:id',
-    component: CategoryItemsComponent
+    children: [
+      {
+      path: '',
+      component: CategoryItemsComponent,
+      }
+    ]
   }
-
-
+//Above section added by Bob
 ];
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
